@@ -1,6 +1,6 @@
 # Chat SAAE 💧
 
-## Sistema de Atendimento Eletrônico de Usuários 👨‍👩‍👦‍👦a
+## Sistema de Atendimento Eletrônico de Usuários 👨‍👩‍👦‍👦
 
 # Dev 👨🏽‍💻
 
@@ -24,11 +24,14 @@ O resultado desse projeto deve ser uma página web e/ou app para dispositivos m�
 
 📌 **Etapas do projeto** 
 
-1. Escrita do algoritmo em pseudoliguagem *portugol*;
+1. Escrita do algoritmo em pseudolinguagem *portugol*;
 
 
 
+📌 **Ferramentas** 
 
+1. Potugol Studio (Univali): ferramenta de código aberto para escrita de pseudocódigo em Língua Portuguesa com sintaxe similar à linguagem C. Download em http://lite.acad.univali.br/portugol/
+2. . Typora.io
 
  
 
