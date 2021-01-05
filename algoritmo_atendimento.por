@@ -9,6 +9,7 @@ programa
 	funcao inicio()
 	{
 		Titulo()
+		MenuPrincipal()
 	}
 	
 	//geração da caixa do título principal
@@ -26,9 +27,7 @@ programa
 		para(linha = 0; linha <= 79; linha++)
 		{
 			escreva("=")
-			}
-
-		MenuPrincipal()
+			}		
 	}
 
 	//geração do menu principal
@@ -84,7 +83,25 @@ programa
 	//orietação para eissão da segunda via da fatura
 	funcao SegundaVia()
 	{
-		escreva("\n\t\tSegunda Via da Fatura\n\n")
+		caracter contaVencida = '0'
+		
+		limpa()
+		Titulo()
+		escreva("\n\n\t\t\t<<<Segunda Via da Fatura >>>\n\n")
+		escreva("\nSAAE: A conta que você deseja está vencida há mais de 60 dias?")
+		escreva("\n\nSAAE: Digite S (SIM) ou N (Não) ")
+		leia(contaVencida)
+		
+		se(contaVencida == 's'){
+			escreva("\nUsuário: Sim!")
+			escreva("\n\nSAAE: Contas vencidas a mais de 60 dias devem ser tratadas como Dívida Ativa.")
+			escreva("\n\nSAAE: Por gentileza, entre em contato com o SAAE de segunda à sexta em horário\n      comercial pelo WhatsApp (11) 9-9984-3028 ou pelo telefone (11) 4602-6370.\n")
+		}
+		senao se(contaVencida == 'n') {
+			escreva("\nUsuário: Não!")
+			escreva("\n\nSAAE: A segunda via da fatura pode ser obtida pelo site https://www.saaesalto.sp.gov.br.")
+			escreva("\n\nSAAE: Tambem é possível pedir a conta por e-mail pelo 0800-77-96300 a qualquer dia da\n      semana e horário com ligação gratuita.\n")
+		}
 	}
 
 	//orientação para procedimentos de conferência do valor da fatura
@@ -123,7 +140,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 204; 
+ * @POSICAO-CURSOR = 2357; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
