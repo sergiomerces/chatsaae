@@ -8,12 +8,12 @@ programa
 	
 	funcao inicio()
 	{
-		Titulo()
-		MenuPrincipal()
+		exibir_titulo()
+		exibir_servico()
 	}
 	
 	//geração da caixa do título principal
-	funcao Titulo()
+	funcao exibir_titulo()
 	{
 		inteiro linha = 0
 		
@@ -31,44 +31,68 @@ programa
 	}
 
 	//geração do menu principal
-	funcao MenuPrincipal()
+	funcao exibir_servico()
 	{
-		caracter opcao = '0'
+		caracter opcao = '*'
 		
 		escreva("\n\n  Escolha o número correspondente ao serviço desejado:\n")
-		escreva("\n| 1: Segunda Via da Fatura \t\t\t| 2: Reclamação Valor da Fatura \n| 3: Ligação de Água e Esgoto \t\t\t| 4: Parcelamento \n| 5: Vazamentos \t\t\t\t| 6: Serviços")
+		escreva("\n| 1: Segunda Via da Fatura \t\t\t| 2: Reclamação Valor da Fatura")
+		escreva("\n| 3: Ligação de Água e Esgoto \t\t\t| 4: Parcelamento Fatura/Multa")
+		escreva("\n| 5: Vazamentos \t\t\t\t| 6: Alteração de Titular")
+		escreva("\n| 7: Corte a Pedido/Religação \t\t\t| 8: Troca de Registro")
+		escreva("\n| 9: Caminhão-Pipa \t\t\t\t| 0: Outros Serviços")
 		escreva("\n\nOpçao: ")
 		leia(opcao)
 
 		escolha(opcao)
 		{
 			caso '1':{
-				SegundaVia()
+				gerar_fatura()
 				pare
 				}
 
 			caso '2':{
-				ReclamacaoFatura()
+				reclamar_valor()
 				pare
 				}
 
 			caso '3':{
-				LigacaoAgua()
+				ligar_agua()
 				pare
 				}
 
 			caso '4':{
-				Parcelamento()
+				parcelar_conta()
 				pare
 				}
 
 			caso '5':{
-				Vazamentos()
+				consertar_vazamento()
 				pare
 				}
 
 			caso '6':{
-				Servicos()
+				trocar_titular()
+				pare
+				}
+
+			caso '7':{
+				cortar_religar()
+				pare
+				}
+
+			caso '8':{
+				trocar_registro()
+				pare
+				}
+
+			caso '9':{
+				vender_pipa()
+				pare
+				}
+
+			caso '0':{
+				solicitar_outros()
 				pare
 				}
 
@@ -81,13 +105,13 @@ programa
 	}
 
 	//orietação para eissão da segunda via da fatura
-	funcao SegundaVia()
+	funcao gerar_fatura()
 	{
 		caracter contaVencida = '0'
 		
 		limpa()
-		Titulo()
-		escreva("\n\n\t\t\t<<<Segunda Via da Fatura >>>\n\n")
+		exibir_titulo()
+		escreva("\n\n\t\t\t<<< Segunda Via da Fatura >>>\n\n")
 		escreva("\nSAAE: A conta que você deseja está vencida há mais de 60 dias?")
 		escreva("\n\nSAAE: Digite S (SIM) ou N (Não) ")
 		leia(contaVencida)
@@ -105,31 +129,55 @@ programa
 	}
 
 	//orientação para procedimentos de conferência do valor da fatura
-	funcao ReclamacaoFatura()
+	funcao reclamar_valor()
 	{
 		escreva("\n\t\tReclamaão do Valor da Fatura\n\n")
 	}
 
 	//orientação para pedido de ligação de água e esgoto
-	funcao LigacaoAgua()
+	funcao ligar_agua()
 	{
 		escreva("\n\t\tPedido de Ligação de Água e Esgoto\n\n")
 	}
 
 	//orientação para parcelamento de faturas em atraso e multas
-	funcao Parcelamento()
+	funcao parcelar_conta()
 	{
 		escreva("\n\t\tNegociação de Faturas em Atraso ou Multas\n\n")
 	}
 
 	//orientação para manutenção de vazamentos de água e desobstrução de esgoto
-	funcao Vazamentos()
+	funcao consertar_vazamento()
 	{
 		escreva("\n\t\tManutenção de vazamentos de Água ou Desobstrução de Esgoto\n\n")
 	}
 
+	//orientacao para troca de titular de conta
+	funcao trocar_titular()
+	{
+		escreva("\n\t\tTroca de Titular da Conta\n\n")
+	}
+
+	//orientacao para pedido de corte a pedido e religação
+	funcao cortar_religar()
+	{
+		escreva("\n\t\tCorte a Pedido e Religação\n\n")
+	}
+
+	//orientacao para troca de registro
+	funcao trocar_registro()
+	{
+		escreva("\n\t\tTroca de Registro\n\n")
+	}
+
+	//orientacao para venda de caminhão-pipa
+	funcao vender_pipa()
+	{
+		escreva("\n\t\tVenda de Caminhão-Pipa\n\n")
+	}
+
 	//orientacao de outros servios do SAAE
-	funcao Servicos()
+	funcao solicitar_outros()
 	{
 		escreva("\n\t\tOutros serviços do SAAE\n\n")
 	}
@@ -140,7 +188,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 2357; 
+ * @POSICAO-CURSOR = 1783; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
