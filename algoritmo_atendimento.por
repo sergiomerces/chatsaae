@@ -5,9 +5,11 @@ Salto - SP (BRA), 3 de janeiro de 2021*/
 
 programa
 {
+	inclua biblioteca Util --> u
 	
 	funcao inicio()
 	{
+		limpa()
 		exibir_titulo()
 		exibir_servico()
 	}
@@ -104,30 +106,83 @@ programa
 			}
 	}
 
+	funcao sair()
+	{
+	 limpa()	
+	}
+
 	//orietação para eissão da segunda via da fatura
 	funcao gerar_fatura()
 	{
-		caracter contaVencida = '0'
+		inteiro tempo = 1000
+		caracter contaVencida = '0'		
 		
 		limpa()
 		exibir_titulo()
 		escreva("\n\n\t\t\t<<< Segunda Via da Fatura >>>\n\n")
-		escreva("\nSAAE: A conta que você deseja está vencida há mais de 60 dias?")
+		u.aguarde(tempo)
+		escreva("\nSAAE: A conta que você deseja é foi emitida antes de 1º/01/2020?")
+		u.aguarde(tempo)
 		escreva("\n\nSAAE: Digite S (SIM) ou N (Não) ")
 		leia(contaVencida)
 		
 		se(contaVencida == 's'){
 			escreva("\nUsuário: Sim!")
-			escreva("\n\nSAAE: Contas vencidas a mais de 60 dias devem ser tratadas como Dívida Ativa.")
-			escreva("\n\nSAAE: Por gentileza, entre em contato com o SAAE de segunda à sexta em horário\n      comercial pelo WhatsApp (11) 9-9984-3028 ou pelo telefone (11) 4602-6370.\n")
+			u.aguarde(tempo)
+			escreva("\n\nSAAE: Contas emitidas antes de 1º/01/2020 devem ser tratadas como Dívida Ativa.")
+			u.aguarde(tempo)
+			escreva("\n\nSAAE: Por gentileza, entre em contato com o SAAE de segunda à sexta em horário\n      comercial pelo WhatsApp (11) 9-9984-3028 ou pelo telefone (11) 4602-6370.")
+			u.aguarde(tempo)
+
+			escapar_gerarfatura()
 		}
 		senao se(contaVencida == 'n') {
 			escreva("\nUsuário: Não!")
+			u.aguarde(tempo)
 			escreva("\n\nSAAE: A segunda via da fatura pode ser obtida pelo site https://www.saaesalto.sp.gov.br.")
-			escreva("\n\nSAAE: Tambem é possível pedir a conta por e-mail pelo 0800-77-96300 a qualquer dia da\n      semana e horário com ligação gratuita.\n")
+			u.aguarde(tempo)
+			escreva("\n\nSAAE: Também é possível pedir a conta por e-mail pelo 0800-77-96300 a qualquer dia da\n      semana e horário com ligação gratuita.")
+			u.aguarde(tempo)
+			escreva("\n\nSAAE: Se preferir pode retirar a fatura pessoalmente na Conasa, na rua Nove de Julho 849\n      - Vila Nova, sem a necessidade de agendamento prévio.")
+
+			u.aguarde(tempo)
+
+			escapar_gerarfatura()		
 		}
 	}
 
+	//menu de escape de gerar segunda via da fatura
+	funcao escapar_gerarfatura()
+	{
+		caracter navegacao = '*'
+		
+			escreva("\n\n[P: Menu Principal\t V: Voltar\t X: Sair] ")
+			leia(navegacao)
+			
+			escolha(navegacao) {
+
+				caso 'p':{
+					 inicio()
+					 pare
+					}
+
+				caso 'v':{
+					 gerar_fatura()
+					 pare
+					}
+
+				caso 'x':{
+					 sair()
+					 pare
+					}
+
+				caso contrario:{
+					escapar_gerarfatura()
+					}
+				
+				}
+		}
+		
 	//orientação para procedimentos de conferência do valor da fatura
 	funcao reclamar_valor()
 	{
@@ -188,7 +243,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1783; 
+ * @POSICAO-CURSOR = 3671; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
