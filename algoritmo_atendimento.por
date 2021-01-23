@@ -628,7 +628,12 @@ programa
 	//orientação para manutenção de vazamentos de água e desobstrução de esgoto
 	funcao consertar_vazamento()
 	{
-		escreva("\n\t\tManutenção de vazamentos de Água ou Desobstrução de Esgoto\n\n")
+		inteiro tipoVazamento
+		
+		escreva("\n\t<<< Manutenção de vazamentos de Água ou Desobstrução de Esgoto >>>\n\n")
+		escreva("\nSAAE: Qual o serviço desejado?")
+		escreva("\n\n| 1: Vazamento de Água no Cavalete\t\t| 3: Vazamento de Água na Rua")
+		escreva("\n| 2: Vazamento de Água na Calçada\t\t| 4: Vazamento/Desobstrução de Esgoto")
 	}
 
 	//orientacao para pedido de corte a pedido e religação
@@ -679,7 +684,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 26016; 
+ * @POSICAO-CURSOR = 27719; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
