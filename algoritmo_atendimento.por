@@ -628,14 +628,99 @@ programa
 	//orientação para manutenção de vazamentos de água e desobstrução de esgoto
 	funcao consertar_vazamento()
 	{
-		inteiro tipoVazamento
+		inteiro tipoVazamento = 0
 		
+		limpa()
 		escreva("\n\t<<< Manutenção de vazamentos de Água ou Desobstrução de Esgoto >>>\n\n")
 		escreva("\nSAAE: Qual o serviço desejado?")
 		escreva("\n\n| 1: Vazamento de Água no Cavalete\t\t| 3: Vazamento de Água na Rua")
-		escreva("\n| 2: Vazamento de Água na Calçada\t\t| 4: Vazamento/Desobstrução de Esgoto")
+		escreva("\n| 2: Vazamento de Água na Calçada\t\t| 4: Vazamento de Esgoto")
+		escreva("\n\nOpção: ")
+		leia(tipoVazamento)
+
+		escolha(tipoVazamento){
+
+				caso 1:{
+						reparar_cavalete()
+						pare
+					}
+
+				caso 2:{
+					
+						pare
+					}
+
+				caso 3:{
+					
+						pare
+					}
+
+				caso 4:{
+					
+						pare
+					}
+
+				caso contrario:{
+					
+						pare
+					}
+			}
 	}
 
+	funcao reparar_cavalete(){ 
+			inteiro tempo = 1000
+			u.aguarde(tempo)
+			escreva("\n\nUsuário: Vazamento de água no cavalete!")
+			u.aguarde(tempo)
+			escreva("\n\nSAAE: Se possível feche o registro para estancar o vazamento!")
+			u.aguarde(tempo)
+			escreva("\n\nSAAE: Para solicitar o conserto do vazamento ligue na Central de Atendimento 24h\n      para abrir o chamado:")
+			u.aguarde(tempo)
+			escreva("\n\nSAAE: 0800-77-96300")
+			u.aguarde(tempo)
+			escreva("\n\nSAAE: A ligação é gratuita.")
+			u.aguarde(tempo)
+			escreva("\n\nSAAE: Tenha sempre uma conta em mãos e identifique seu CDC ou o endereço do\n      imóvel com rua e número.")
+			u.aguarde(tempo)
+			escreva("\n\nSAAE: Se possível feche o registro para estancar o vazamento!")
+			u.aguarde(tempo)
+			escreva("\n\nSAAE: Os encanadores trabalham das 8:00 às 22:00, a previsão de execução desse\n      serviço é de 24 horas.m")
+
+			escapar_vazamentos()
+		}
+
+	//menu de escape de vazamentos
+	funcao escapar_vazamentos()
+	{
+		caracter navegacao = '*'
+		
+			escreva("\n\n[P: Menu Principal\t V: Voltar\t X: Sair] ")
+			leia(navegacao)
+			
+			escolha(navegacao) {
+
+				caso 'p':{
+					 inicio()
+					 pare
+					}
+
+				caso 'v':{
+					 consertar_vazamento()
+					 pare
+					}
+
+				caso 'x':{
+					 sair()
+					 pare
+					}
+
+				caso contrario:{
+					consertar_vazamento()
+					}
+				
+				}
+	}
+	
 	//orientacao para pedido de corte a pedido e religação
 	funcao cortar_religar()
 	{
@@ -684,7 +769,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 27719; 
+ * @POSICAO-CURSOR = 28954; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
