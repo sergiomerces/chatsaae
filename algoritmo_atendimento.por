@@ -631,6 +631,7 @@ programa
 		inteiro tipoVazamento = 0
 		
 		limpa()
+		exibir_titulo()
 		escreva("\n\t<<< Manutenção de vazamentos de Água ou Desobstrução de Esgoto >>>\n\n")
 		escreva("\nSAAE: Qual o serviço desejado?")
 		escreva("\n\n| 1: Vazamento de Água no Cavalete\t\t| 3: Vazamento de Água na Rua")
@@ -646,7 +647,7 @@ programa
 					}
 
 				caso 2:{
-					
+						reparar_calcada()
 						pare
 					}
 
@@ -669,6 +670,7 @@ programa
 
 	funcao reparar_cavalete(){ 
 			inteiro tempo = 1000
+			
 			u.aguarde(tempo)
 			escreva("\n\nUsuário: Vazamento de água no cavalete!")
 			u.aguarde(tempo)
@@ -685,6 +687,29 @@ programa
 			escreva("\n\nSAAE: Se possível feche o registro para estancar o vazamento!")
 			u.aguarde(tempo)
 			escreva("\n\nSAAE: Os encanadores trabalham das 8:00 às 22:00, a previsão de execução desse\n      serviço é de 24 horas.m")
+
+			escapar_vazamentos()
+		}
+
+	funcao reparar_calcada(){ 
+			inteiro tempo = 1000
+			
+			u.aguarde(tempo)
+			escreva("\n\nUsuário: Vazamento de água na calçada!")
+			u.aguarde(tempo)			
+			escreva("\n\nSAAE: Para solicitar o conserto do vazamento ligue na Central de Atendimento 24h\n      para abrir o chamado:")
+			u.aguarde(tempo)
+			escreva("\n\nSAAE: 0800-77-96300")
+			u.aguarde(tempo)
+			escreva("\n\nSAAE: A ligação é gratuita.")
+			u.aguarde(tempo)
+			escreva("\n\nSAAE: Tenha sempre uma conta em mãos e identifique seu CDC ou o endereço do\n      imóvel com rua e número.")
+			u.aguarde(tempo)
+			escreva("\n\nSAAE: Caso não more no local e esteja apenas de passagem, por favor identifique\n      a rua e o número mis próximo do local do vazamento")
+			u.aguarde(tempo)
+			escreva("\n\nSAAE: Os encanadores trabalham das 8:00 às 22:00, a previsão de execução desse\n      serviço é de 24 horas.m")
+			u.aguarde(tempo)
+			escreva("\n\nSAAE: Caso a equipe de encanadores tenha que abrir a calçada, após o conserto\n      outra equipe de pedreiros volta para fechar o piso em até 10 dias.")
 
 			escapar_vazamentos()
 		}
@@ -769,7 +794,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 28954; 
+ * @POSICAO-CURSOR = 30023; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
