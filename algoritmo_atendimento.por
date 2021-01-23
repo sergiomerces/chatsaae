@@ -549,15 +549,46 @@ programa
 							u.aguarde(tempo)
 							escreva("\n\n\tApresentar NF ou cupom fiscal dos materiais")
 							escapar_ligaragua()
-						}
-									
+						}								
 			pare	
 			}
 
 			caso 3:{
-					escreva("Horta")
+					u.aguarde(tempo)
+					escreva("\n\nUsuário: 3 Ligação para Horta Comunitária!")
+					u.aguarde(tempo)
+					escreva("\n\nSAAE: Para fazer o pedido da ligação de água é preciso ser proprietário do\n      imóvel, cônjuge ou parente em primeiro grau que comprove vínculo com o\n      proprietário.")
+					u.aguarde(tempo)
+					escreva("\n\nSAAE: Terceiros podem fazer o pedido, desde que autorizados formalmente pelo\n      proprietário com procuração ou documento de autorização.")
+					u.aguarde(tempo)
+					escreva("\n\nSAAE: Conforme preço fixado na Resolução ARES-PCJ n.º 328/2019 deve ser recolhida\n      uma taxa de R$ 426,48 pelo serviço de ligação de água e esgoto.")
+					u.aguarde(tempo)
+					escreva("\n\nSAAE: Conforme a Resolução ARES-PCJ nº 336/2020 o medidor deve ser instalado em\n      caixa padrão com acesso externo aos leituristas e encanadores.")
+					u.aguarde(tempo)
+					escreva("\n\nSAAE: A caixa padrão deve ser instalada pelo proprietário antes do pedido de\n      ligação e deve haver identificação com número do imóvel, lote e quadra na\n      fachada. Não pode haver obstáculos que impeçam a execução do serviço no\n      passeio ou o acesso à caixa padrão.")
+					u.aguarde(tempo)
+					escreva("\n\nSAAE: Caso o serviço não possa ser executado por qualquer um dos motivos\n      mencionados será cobrada uma taxa extra de R$ 78,57 a ser recolhida à vista\n      em razão da visita improdutiva.")
+					u.aguarde(tempo)
+					escreva("\n\n\tDocumentos:")
+					escreva("\n\tA) Contrato de Compra e Venda")
+					escreva("\n\tB) Carnê do IPTU")
+					escreva("\n\tC) Autorização expedida pela Prefeitura")
+					escreva("\n\tD) Carteira de Identidade e CPF ou CNH do proprietário")
+					escreva("\n\tE) Se o requerente for cônjuge deve apresentar seus documentos pessoais e\n\t   Certidão de Casamento ou Contrato de União Estável")
+					escreva("\n\tF) Se o requerente for filho, pai, mãe ou irmão deve apresentar seus\n\t   documentos pessoais")
+					escreva("\n\tG) Se o requerente for um terceiro deve apresentar procuração ou documento\n\t   de autorização com firma reconhecida")
+					escreva("\n\tH) Se o titular for uma pessoa jurídica o requerente deve apresentar o\n\t   procuração ou autorização com firma reconhecida, Contrato Social e CNPJ")
+					u.aguarde(tempo)
+					escreva("\n\n\tMateriais")
+					escreva("\n\tA) 02 registros de bloqueio PVC 3/4 polegadas")							
+					escreva("\n\tB) 01 registro de gaveta com volante de bronze 3/4 polegada")							
+					escreva("\n\tC) 03 cotovelos de bronze em 90° 3/4 de polegada")							
+					escreva("\n\tD) 03 niples de bronze 3/4 de polegada")
+					escreva("\n\tE) 02 porcas com tubete PVC e anel de borracha 3/4 polegada")
+					escreva("\n\tF) 01 fita veda rosca de 50 metros")	
+					escapar_ligaragua()
+					pare
 				}
-			pare
 			}
 									
 		}	
@@ -648,7 +679,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 23532; 
+ * @POSICAO-CURSOR = 26016; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
