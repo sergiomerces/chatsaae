@@ -657,17 +657,18 @@ programa
 					}
 
 				caso 4:{
-					
+						reparar_esgoto()
 						pare
 					}
 
 				caso contrario:{
-					
+						escapar_vazamentos()
 						pare
 					}
 			}
 	}
 
+	//orientação para chamado de vazamento no cavalete
 	funcao reparar_cavalete(){ 
 			inteiro tempo = 1000
 			
@@ -691,6 +692,7 @@ programa
 			escapar_vazamentos()
 		}
 
+	//orientação para chamado de vazamento na calçada
 	funcao reparar_calcada(){ 
 			inteiro tempo = 1000
 			
@@ -714,6 +716,7 @@ programa
 			escapar_vazamentos()
 		}
 
+	//orientação para chamado de vazamento na rua
 	funcao reparar_rua(){ 
 			inteiro tempo = 1000
 			
@@ -728,12 +731,66 @@ programa
 			u.aguarde(tempo)
 			escreva("\n\nSAAE: Tenha sempre uma conta em mãos e identifique seu CDC ou o endereço do\n      imóvel com rua e número.")
 			u.aguarde(tempo)
-			escreva("\n\nSAAE: Caso não more no local e esteja apenas de passagem, por favor identifique\n      a rua e o número mis próximo do local do vazamento")
+			escreva("\n\nSAAE: Caso não more no local e esteja apenas de passagem, por favor identifique\n      a rua e o número mais próximo do local do vazamento")
 			u.aguarde(tempo)
 			escreva("\n\nSAAE: Os encanadores trabalham das 8:00 às 22:00, a previsão de execução desse\n      serviço é de 24 horas.m")
 			u.aguarde(tempo)
 			escreva("\n\nSAAE: Caso a equipe de encanadores tenha que abrir o pavimento, após o conserto\n      outra equipe de pedreiros volta para fechar o piso em até 10 dias.")
 
+			escapar_vazamentos()
+		}
+
+	//orientação para chamado de vazamento de esgoto
+	funcao reparar_esgoto(){ 
+			
+			inteiro tempo, tipoEsgoto
+			tempo = 1000
+			tipoEsgoto = 0
+			
+			u.aguarde(tempo)
+			escreva("\n\nUsuário: Vazamento de esgoto!")
+			u.aguarde(tempo)
+			escreva("\n\nSAAE: A reclamação é de boca de lobo ou grelha de água de chuva entupida ou é\n      retorno de esgoto em PV (tampa de ferro) na rua ou dentro de casa?")
+			escreva("\n\nSAAE: Escolha 1: BOCA DE LOBO entupida ou 2: Retorno do esgoto no PV ou em CASA")
+			escreva("\n\nOpção: ")
+			leia(tipoEsgoto)
+			
+			se(tipoEsgoto == 1){
+				u.aguarde(tempo)
+				escreva("\n\nUsuário: Boca de lobo ou grelha que recolhe água de chuva.")
+				u.aguarde(tempo)
+				escreva("\n\nSAAE: Se o problema for de boca de lobo ou grelha na rua ou sarjeta que recolhe\n      água de chuva é preciso acionar a Secretaria Municipal de Obras e Serviços\n Públicos.")
+				u.aguarde(tempo)
+				escreva("\n\nSAAE: Telefones da Secretaria: 4028-1826 ou 4029-8556")
+				u.aguarde(tempo)
+				escreva("\n\nSAAE: Também pode ser acionada a Ouvidoria da Prefeitura pelos telefones:")
+				u.aguarde(tempo)
+				escreva("\n\nSAAE: 156 ou 4602-8510 ou 4602-8514")
+				}
+						
+			senao se(tipoEsgoto == 2){
+				u.aguarde(tempo)
+				escreva("\n\nUsuário: Tampa de PV ou casa com retorno de esgoto.")
+				u.aguarde(tempo)
+				escreva("\n\nSAAE: Para abrir um chamado de desobstrução de esgoto ligue:")
+				u.aguarde(tempo)
+				escreva("\n\nSAAE: 0800-77-96300 a qualquer dia ou horário.")
+				u.aguarde(tempo)
+				escreva("\n\nSAAE: A ligação é gratuita.")
+				u.aguarde(tempo)
+				escreva("\n\nSAAE: Tenha sempre uma conta em mãos e identifique seu CDC ou o endereço do\n      imóvel com rua e número.")
+				u.aguarde(tempo)
+				escreva("\n\nSAAE: Caso não more no local e esteja apenas de passagem, por favor identifique\n      a rua e o número mis próximo do local do vazamento")
+				u.aguarde(tempo)
+				escreva("\n\nSAAE: Os encanadores trabalham das 8:00 às 22:00, a previsão de execução desse\n      serviço é de 24 horas.")
+				u.aguarde(tempo)
+				escreva("\n\nSAAE: Caso a equipe de encanadores tenha que abrir a rua ou calçada, após a\n      desobstrução outra equipe de pedreiros volta para fechar o piso em até 10 dias.")
+				}
+
+			senao{					
+				escapar_vazamentos()
+				}
+									
 			escapar_vazamentos()
 		}
 
@@ -772,7 +829,7 @@ programa
 	//orientacao para pedido de corte a pedido e religação
 	funcao cortar_religar()
 	{
-		escreva("\n\t\tCorte a Pedido e Religação\n\n")
+		escreva("\n\t\t<<< Corte a Pedido e Religação >>>\n\n")
 	}
 
 	//orientacao para venda de caminhão-pipa
@@ -817,7 +874,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 31115; 
+ * @POSICAO-CURSOR = 34328; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

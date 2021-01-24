@@ -1,0 +1,77 @@
+[33mcommit 1eaca12556b69088bdf78c43402aebd72ae08454[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Sergio Merces <sergio.merces@gmail.com>
+Date:   Sat Jan 23 17:45:19 2021 -0300
+
+    Implementação da opção 3 vazamento de rua no menu Vazamentos
+
+[33mcommit 0b88be821059a33b9b2371e3765d9d5678128a8b[m
+Author: Sergio Merces <sergio.merces@gmail.com>
+Date:   Sat Jan 23 15:57:48 2021 -0300
+
+    Implementação da opção 2 vazamento de calçada no menu Vazamentos
+
+[33mcommit 1a688bb0022f0111d648eed14a16dda873d5e824[m
+Author: Sergio Merces <sergio.merces@gmail.com>
+Date:   Sat Jan 23 14:50:23 2021 -0300
+
+    Implementação da opção 1 vazamento de cavalete no menu Vazamentos
+
+[33mcommit abe62979d6a490e3ec7a00b7c481629f1caca307[m
+Author: Sergio Merces <sergio.merces@gmail.com>
+Date:   Sat Jan 23 00:06:37 2021 -0300
+
+    Menu da opção Vazamentos
+
+[33mcommit a1eb190e36a657ad97bdbffbf7a6c1a6b9e11791[m
+Author: Sergio Merces <sergio.merces@gmail.com>
+Date:   Fri Jan 22 21:38:58 2021 -0300
+
+    Finalizada Opção de ligação de água com inclusão de horta comunitária
+
+[33mcommit 41c251d0795dd8e9a83ce75a3e4a0477381d7442[m
+Author: Sergio Merces <sergio.merces@gmail.com>
+Date:   Thu Jan 14 23:54:52 2021 -0300
+
+    Opção ligação de água em apartamentos
+
+[33mcommit 6115dec536485739f404191c2f0ed1e06a88dac1[m
+Author: Sergio Merces <sergio.merces@gmail.com>
+Date:   Wed Jan 6 21:47:59 2021 -0300
+
+    Finalizada a opção 1:Segunda Via da Fatura
+
+[33mcommit 85d5587d42d5b6410016bc008c42796a9043adf5[m
+Author: Sergio Merces <sergio.merces@gmail.com>
+Date:   Tue Jan 5 22:49:16 2021 -0300
+
+    Adição dos serciços mais requisitados ao menu principal
+
+[33mcommit 1d4b6d24ef78a0512f0e975d65840ff33a79e809[m
+Author: Sergio Merces <sergio.merces@gmail.com>
+Date:   Tue Jan 5 00:12:19 2021 -0300
+
+    Opção Segunda Via de Conta no pseudocódigo
+
+[33mcommit 7c6157a8416ec0eef4ccdec94f7fd622921cbf56[m
+Author: Sergio Merces <sergio.merces@gmail.com>
+Date:   Sun Jan 3 23:52:57 2021 -0300
+
+    Edição do README com indicação de download do Portugol Studio
+
+[33mcommit da114be77332963979274c2008848e65805d0916[m
+Author: Sergio Merces <sergio.merces@gmail.com>
+Date:   Sun Jan 3 23:36:25 2021 -0300
+
+    Edição do README e algoritmo em pseudolinguagem
+
+[33mcommit 2584a0cad9eadff5cd5ab578d9b139f193de41a7[m
+Author: Sergio Merces <sergio.merces@gmail.com>
+Date:   Mon Dec 14 13:10:37 2020 -0300
+
+    Primeiro commit
+
+[33mcommit 908c8c5063b0e99144fa72a39ac0cee821597ee1[m
+Author: Sergio Merces <sergio.merces@gmail.com>
+Date:   Sun Dec 13 20:54:07 2020 -0300
+
+    Initial commit
