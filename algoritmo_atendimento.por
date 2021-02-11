@@ -829,7 +829,91 @@ programa
 	//orientacao para pedido de corte a pedido e religação
 	funcao cortar_religar()
 	{
-		escreva("\n\t\t<<< Corte a Pedido e Religação >>>\n\n")
+		inteiro corteReligacao, tempo
+		corteReligacao = 0
+		tempo = 1000
+		
+		limpa()
+		exibir_titulo()
+		escreva("\n\n\t\t    <<< Corte a Pedido e Religação >>>")
+		u.aguarde(tempo)
+		escreva("\n\nSAAE: Você deseja o serviço de CORTE ou RELIGAÇÃO?")
+		u.aguarde(tempo)
+		escreva("\n\nSAAE: 1: Para CORTE ou 2: RELIGAÇÃO")
+		escreva("\nOpção: ")
+		leia(corteReligacao)
+		
+		se(corteReligacao == 1){
+			u.aguarde(tempo)
+			escreva("\n\nUsuário: Corte de ligação de água.")
+			u.aguarde(tempo)
+			escreva("\n\nSAAE: Para solicitar o corte o imóvel deve estar desocupado, sem moradores e não\n      pode haver conta ou parcela vencidas.")
+			u.aguarde(tempo)
+			escreva("\n\nSAAE: O pedido de ser feito pelo proprietário com apresentação de RG e CPF ou CNH\n      e a última conta paga.")
+			u.aguarde(tempo)
+			escreva("\n\nSAAE: Se o requerente for parente em primeiro grau, pode fazer o pedido\n      apresentando o RG, CPF ou CNH do titular e os seus também.")
+			u.aguarde(tempo)
+			escreva("\n\nSAAE: Se o requerente for um terceiro deve apresentar seu RG e CPF ou CNH e\n      autorização preenchida e assinada pelo titular com firma reconhecida.")
+			u.aguarde(tempo)
+			escreva("\n\nSAAE: Para fazer o corte não há cobrança de taxa de serviço; quando for pedida a\n      religação será recolhida a taxa de R$ 78,57.")
+			u.aguarde(tempo)
+			escreva("\n\nSAAE: Esse serviço pode ser solicitado de segunda à sexta-feira das 8h às 17h pelo\n      WhatsApp (11) 9-9984-3028 ou a qualquer dia e horário através de atendimento\n      presencial no SAAE previamente agendado pelo 0800-77-96300.\n")
+			
+			escapar_corte()
+			}
+
+		senao se(corteReligacao == 2){
+			u.aguarde(tempo)
+			escreva("\n\nUsuário: Religação de água.")
+			u.aguarde(tempo)
+			escreva("\n\nSAAE: O pedido deve ser feito pelo proprietário com apresentação de RG e CPF ou CNH.")
+			u.aguarde(tempo)
+			escreva("\n\nSAAE: Se o requerente for parente em primeiro grau, pode fazer o pedido\n      apresentando o RG, CPF ou CNH do titular e os seus também.")
+			u.aguarde(tempo)
+			escreva("\n\nSAAE: Se o requerente for um terceiro deve apresentar seu RG e CPF ou CNH e\n      autorização preenchida e assinada pelo titular com firma reconhecida.")
+			u.aguarde(tempo)
+			escreva("\n\nSAAE: Para fazer o religação e cobrada a taxa de serviço de R$ 78,57 e apresentar o\n      comprovante de pagamento.")
+			u.aguarde(tempo)
+			escreva("\n\nSAAE: Esse serviço pode ser solicitado de segunda à sexta-feira das 8h às 17h pelo\n      WhatsApp (11) 9-9984-3028 ou a qualquer dia e horário através de atendimento\n      presencial no SAAE previamente agendado pelo 0800-77-96300.\n")
+
+			escapar_corte()
+			}
+			
+		senao{
+				escapar_corte()
+			}
+	}
+
+	//menu de escape de corte e religação
+	funcao escapar_corte()
+	{
+		caracter navegacao = '*'
+		
+			escreva("\n\n[P: Menu Principal\t V: Voltar\t X: Sair] ")
+			leia(navegacao)
+			
+			escolha(navegacao) {
+
+				caso 'p':{
+					 inicio()
+					 pare
+					}
+
+				caso 'v':{
+					 cortar_religar()
+					 pare
+					}
+
+				caso 'x':{
+					 sair()
+					 pare
+					}
+
+				caso contrario:{
+					cortar_religar()
+					}
+				
+				}
 	}
 
 	//orientacao para venda de caminhão-pipa
@@ -874,7 +958,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 34328; 
+ * @POSICAO-CURSOR = 35895; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
