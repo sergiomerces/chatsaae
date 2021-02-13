@@ -69,7 +69,7 @@ programa
 				}
 
 			caso '5':{
-				vender_pipa()
+				entregar_pipa()
 				pare
 				}
 
@@ -140,9 +140,7 @@ programa
 		senao se(contaVencida == 'n') {
 			escreva("\nUsuário: Não!")
 			u.aguarde(tempo)
-			escreva("\n\nSAAE: A segunda via da fatura pode ser obtida pelo site https://www.saaesalto.sp.gov.br.")
-			u.aguarde(tempo)
-			escreva("\n\nSAAE: Também é possível pedir a conta por e-mail pelo 0800-77-96300 a qualquer dia da\n      semana e horário com ligação gratuita.")
+			escreva("\n\nSAAE: A segunda via da fatura pode ser obtida pelo site https://www.saaesalto.sp.gov.br.")			
 			u.aguarde(tempo)
 			escreva("\n\nSAAE: Se preferir pode retirar a fatura pessoalmente na Conasa, na rua Nove de Julho 849\n      - Vila Nova, sem a necessidade de agendamento prévio.")
 
@@ -248,6 +246,8 @@ programa
 							escreva("\n\tD) 03 niples de bronze 3/4 de polegada")
 							escreva("\n\tE) 02 porcas com tubete PVC e anel de borracha 3/4 polegada")
 							escreva("\n\tF) 01 fita veda rosca de 50 metros")	
+							u.aguarde(tempo)
+							escreva("\n\nSAAE: Esse serviço pode ser solicitado de segunda à sexta-feira das 8h às 17h pelo\n      WhatsApp (11) 9-9984-3028 ou a qualquer dia e horário através de atendimento\n      presencial no SAAE previamente agendado.\n")
 							escapar_ligaragua()
 						} 
 
@@ -281,6 +281,8 @@ programa
 							escreva("\n\tD) 03 niples de bronze 3/4 de polegada")
 							escreva("\n\tE) 02 porcas com tubete PVC e anel de borracha 3/4 polegada")
 							escreva("\n\tF) 01 fita veda rosca de 50 metros")
+							u.aguarde(tempo)
+							escreva("\n\nSAAE: Esse serviço pode ser solicitado de segunda à sexta-feira das 8h às 17h pelo\n      WhatsApp (11) 9-9984-3028 ou a qualquer dia e horário através de atendimento\n      presencial no SAAE previamente agendado.\n")
 							escapar_ligaragua()
 						}
 
@@ -316,6 +318,8 @@ programa
 							escreva("\n\tD) 03 niples de bronze 3/4 de polegada")
 							escreva("\n\tE) 02 porcas com tubete PVC e anel de borracha 3/4 polegada")
 							escreva("\n\tF) 01 fita veda rosca de 50 metros")	
+							u.aguarde(tempo)
+							escreva("\n\nSAAE: Esse serviço pode ser solicitado de segunda à sexta-feira das 8h às 17h pelo\n      WhatsApp (11) 9-9984-3028 ou a qualquer dia e horário através de atendimento\n      presencial no SAAE previamente agendado.\n")
 							escapar_ligaragua()
 						}
 
@@ -369,6 +373,8 @@ programa
 							escreva("\n\t* 01 par de rosca com tubete curto e anel de borracha 3/4 de pol. em PVC")
 							u.aguarde(tempo)
 							escreva("\n\n\tApresentar NF ou cupom fiscal dos materiais")
+							u.aguarde(tempo)
+							escreva("\n\nSAAE: Esse serviço pode ser solicitado de segunda à sexta-feira das 8h às 17h pelo\n      WhatsApp (11) 9-9984-3028 ou a qualquer dia e horário através de atendimento\n      presencial no SAAE previamente agendado.\n")
 							escapar_ligaragua()
 						}
 
@@ -376,8 +382,9 @@ programa
 							u.aguarde(tempo)
 							escreva("\n\nUsuário: Residencial Solar das Araras!")
 							u.aguarde(tempo)
-							escreva("\n\nSAAE: No Residencial Solar das Araras localizado à rua Japão 05 - Jd. das\n      Nações não é necessária nenhuma peça para ligação.")
+							escreva("\n\nSAAE: No Residencial Solar das Araras localizado à rua Japão 05 - Jd. das\n      Nações não é necessária nenhuma peça para ligação.")							
 							u.aguarde(tempo)
+							escreva("\n\nSAAE: Esse serviço pode ser solicitado de segunda à sexta-feira das 8h às 17h pelo\n      WhatsApp (11) 9-9984-3028 ou a qualquer dia e horário através de atendimento\n      presencial no SAAE previamente agendado.\n")
 							escapar_ligaragua()
 						}
 
@@ -387,6 +394,7 @@ programa
 							u.aguarde(tempo)
 							escreva("\n\nSAAE: No Residencial Brasil localizado à rua Estados Unidos 38 - Guaraú não é\n      necessária nenhuma peça para ligação.")
 							u.aguarde(tempo)
+							escreva("\n\nSAAE: Esse serviço pode ser solicitado de segunda à sexta-feira das 8h às 17h pelo\n      WhatsApp (11) 9-9984-3028 ou a qualquer dia e horário através de atendimento\n      presencial no SAAE previamente agendado.\n")
 							escapar_ligaragua()
 						}
 
@@ -403,6 +411,8 @@ programa
 							escreva("\n\t* 01 par de rosca com tubete curto e anel de borracha 3/4 de pol. em PVC")
 							u.aguarde(tempo)
 							escreva("\n\n\tApresentar NF ou cupom fiscal dos materiais")
+							u.aguarde(tempo)
+							escreva("\n\nSAAE: Esse serviço pode ser solicitado de segunda à sexta-feira das 8h às 17h pelo\n      WhatsApp (11) 9-9984-3028 ou a qualquer dia e horário através de atendimento\n      presencial no SAAE previamente agendado.\n")
 							escapar_ligaragua()
 						}
 
@@ -412,6 +422,7 @@ programa
 							u.aguarde(tempo)
 							escreva("\n\nSAAE: No Residencial Green Park localizado à rua Remígio Dalla Vechia 180 - Jd.\n      Nair Maria não é necessária nenhuma peça para ligação.")
 							u.aguarde(tempo)
+							escreva("\n\nSAAE: Esse serviço pode ser solicitado de segunda à sexta-feira das 8h às 17h pelo\n      WhatsApp (11) 9-9984-3028 ou a qualquer dia e horário através de atendimento\n      presencial no SAAE previamente agendado.\n")
 							escapar_ligaragua()
 					}
 
@@ -426,6 +437,8 @@ programa
 							escreva("\n\t* 01 par de rosca com tubete curto e anel de borracha 3/4 de pol. em PVC")
 							u.aguarde(tempo)
 							escreva("\n\n\tApresentar NF ou cupom fiscal dos materiais")
+							u.aguarde(tempo)
+							escreva("\n\nSAAE: Esse serviço pode ser solicitado de segunda à sexta-feira das 8h às 17h pelo\n      WhatsApp (11) 9-9984-3028 ou a qualquer dia e horário através de atendimento\n      presencial no SAAE previamente agendado.\n")
 							escapar_ligaragua()
 						}
 
@@ -440,6 +453,8 @@ programa
 							escreva("\n\t* 02 luva 3/4 de pol. em PVC um lado com rosca e outro de solda (liso)")
 							u.aguarde(tempo)
 							escreva("\n\n\tApresentar NF ou cupom fiscal dos materiais")
+							u.aguarde(tempo)
+			escreva("\n\nSAAE: Esse serviço pode ser solicitado de segunda à sexta-feira das 8h às 17h pelo\n      WhatsApp (11) 9-9984-3028 ou a qualquer dia e horário através de atendimento\n      presencial no SAAE previamente agendado.\n")
 							escapar_ligaragua()
 						}
 
@@ -449,6 +464,7 @@ programa
 							u.aguarde(tempo)
 							escreva("\n\nSAAE: No Residencial Solar dos Pássaros localizado à Av. da Nações Unidas 664\n      não é necessária nenhuma peça para ligação.")
 							u.aguarde(tempo)
+							escreva("\n\nSAAE: Esse serviço pode ser solicitado de segunda à sexta-feira das 8h às 17h pelo\n      WhatsApp (11) 9-9984-3028 ou a qualquer dia e horário através de atendimento\n      presencial no SAAE previamente agendado.\n")
 							escapar_ligaragua()
 						}
 
@@ -465,6 +481,8 @@ programa
 							escreva("\n\t* 01 par de rosca com tubete curto e anel de borracha 3/4 de pol. em PVC")
 							u.aguarde(tempo)
 							escreva("\n\n\tApresentar NF ou cupom fiscal dos materiais")
+							u.aguarde(tempo)
+							escreva("\n\nSAAE: Esse serviço pode ser solicitado de segunda à sexta-feira das 8h às 17h pelo\n      WhatsApp (11) 9-9984-3028 ou a qualquer dia e horário através de atendimento\n      presencial no SAAE previamente agendado.\n")
 							escapar_ligaragua()
 						}
 
@@ -492,6 +510,8 @@ programa
 							escreva("\n\t* 01 par de rosca com tubete curto e anel de borracha 3/4 de pol. em PVC")
 							u.aguarde(tempo)
 							escreva("\n\n\tApresentar NF ou cupom fiscal dos materiais")
+							u.aguarde(tempo)
+							escreva("\n\nSAAE: Esse serviço pode ser solicitado de segunda à sexta-feira das 8h às 17h pelo\n      WhatsApp (11) 9-9984-3028 ou a qualquer dia e horário através de atendimento\n      presencial no SAAE previamente agendado.\n")
 							escapar_ligaragua()
 						}
 
@@ -512,6 +532,8 @@ programa
 							escreva("\n\t* 01 par de rosca com tubete curto e anel de borracha 3/4 de pol. em PVC")
 							u.aguarde(tempo)
 							escreva("\n\n\tApresentar NF ou cupom fiscal dos materiais")
+							u.aguarde(tempo)
+							escreva("\n\nSAAE: Esse serviço pode ser solicitado de segunda à sexta-feira das 8h às 17h pelo\n      WhatsApp (11) 9-9984-3028 ou a qualquer dia e horário através de atendimento\n      presencial no SAAE previamente agendado.\n")
 							escapar_ligaragua()
 						}
 
@@ -532,6 +554,8 @@ programa
 							escreva("\n\t* 01 par de rosca com tubete curto e anel de borracha 3/4 de pol. em PVC")
 							u.aguarde(tempo)
 							escreva("\n\n\tApresentar NF ou cupom fiscal dos materiais")
+							u.aguarde(tempo)
+							escreva("\n\nSAAE: Esse serviço pode ser solicitado de segunda à sexta-feira das 8h às 17h pelo\n      WhatsApp (11) 9-9984-3028 ou a qualquer dia e horário através de atendimento\n      presencial no SAAE previamente agendado.\n")
 							escapar_ligaragua()
 						}
 
@@ -548,6 +572,8 @@ programa
 							escreva("\n\t* 01 par de rosca com tubete curto e anel de borracha 3/4 de pol. em PVC")
 							u.aguarde(tempo)
 							escreva("\n\n\tApresentar NF ou cupom fiscal dos materiais")
+							u.aguarde(tempo)
+							escreva("\n\nSAAE: Esse serviço pode ser solicitado de segunda à sexta-feira das 8h às 17h pelo\n      WhatsApp (11) 9-9984-3028 ou a qualquer dia e horário através de atendimento\n      presencial no SAAE previamente agendado.\n")
 							escapar_ligaragua()
 						}								
 			pare	
@@ -586,6 +612,8 @@ programa
 					escreva("\n\tD) 03 niples de bronze 3/4 de polegada")
 					escreva("\n\tE) 02 porcas com tubete PVC e anel de borracha 3/4 polegada")
 					escreva("\n\tF) 01 fita veda rosca de 50 metros")	
+					u.aguarde(tempo)
+					escreva("\n\nSAAE: Esse serviço pode ser solicitado de segunda à sexta-feira das 8h às 17h pelo\n      WhatsApp (11) 9-9984-3028 ou a qualquer dia e horário através de atendimento\n      presencial no SAAE previamente agendado.\n")
 					escapar_ligaragua()
 					pare
 				}
@@ -677,17 +705,13 @@ programa
 			u.aguarde(tempo)
 			escreva("\n\nSAAE: Se possível feche o registro para estancar o vazamento!")
 			u.aguarde(tempo)
-			escreva("\n\nSAAE: Para solicitar o conserto do vazamento ligue na Central de Atendimento 24h\n      para abrir o chamado:")
-			u.aguarde(tempo)
-			escreva("\n\nSAAE: 0800-77-96300")
-			u.aguarde(tempo)
-			escreva("\n\nSAAE: A ligação é gratuita.")
+			escreva("\n\nSAAE: Para solicitar o conserto do vazamento ligue 4602-6370 para abrir o\n      chamado:")
 			u.aguarde(tempo)
 			escreva("\n\nSAAE: Tenha sempre uma conta em mãos e identifique seu CDC ou o endereço do\n      imóvel com rua e número.")
 			u.aguarde(tempo)
 			escreva("\n\nSAAE: Se possível feche o registro para estancar o vazamento!")
 			u.aguarde(tempo)
-			escreva("\n\nSAAE: Os encanadores trabalham das 8:00 às 22:00, a previsão de execução desse\n      serviço é de 24 horas.m")
+			escreva("\n\nSAAE: Os encanadores trabalham das 8:00 às 22:00, a previsão de execução desse\n      serviço é de 24 horas.")
 
 			escapar_vazamentos()
 		}
@@ -699,17 +723,15 @@ programa
 			u.aguarde(tempo)
 			escreva("\n\nUsuário: Vazamento de água na calçada!")
 			u.aguarde(tempo)			
-			escreva("\n\nSAAE: Para solicitar o conserto do vazamento ligue na Central de Atendimento 24h\n      para abrir o chamado:")
-			u.aguarde(tempo)
-			escreva("\n\nSAAE: 0800-77-96300")
+			escreva("\n\nSAAE: Para solicitar o conserto do vazamento ligue 4602-6370 para abrir o\n      chamado:")			
 			u.aguarde(tempo)
 			escreva("\n\nSAAE: A ligação é gratuita.")
 			u.aguarde(tempo)
 			escreva("\n\nSAAE: Tenha sempre uma conta em mãos e identifique seu CDC ou o endereço do\n      imóvel com rua e número.")
 			u.aguarde(tempo)
-			escreva("\n\nSAAE: Caso não more no local e esteja apenas de passagem, por favor identifique\n      a rua e o número mis próximo do local do vazamento")
+			escreva("\n\nSAAE: Caso não more no local e esteja apenas de passagem, por favor identifique\n      a rua e o número mais próximo do local do vazamento.")
 			u.aguarde(tempo)
-			escreva("\n\nSAAE: Os encanadores trabalham das 8:00 às 22:00, a previsão de execução desse\n      serviço é de 24 horas.m")
+			escreva("\n\nSAAE: Os encanadores trabalham das 8:00 às 22:00, a previsão de execução desse\n      serviço é de 24 horas.")
 			u.aguarde(tempo)
 			escreva("\n\nSAAE: Caso a equipe de encanadores tenha que abrir a calçada, após o conserto\n      outra equipe de pedreiros volta para fechar o piso em até 10 dias.")
 
@@ -723,9 +745,7 @@ programa
 			u.aguarde(tempo)
 			escreva("\n\nUsuário: Vazamento de água no meio da rua!")
 			u.aguarde(tempo)			
-			escreva("\n\nSAAE: Para solicitar o conserto do vazamento ligue na Central de Atendimento 24h\n      para abrir o chamado:")
-			u.aguarde(tempo)
-			escreva("\n\nSAAE: 0800-77-96300")
+			escreva("\n\nSAAE: Para solicitar o conserto do vazamento ligue 4602-6370 para abrir o\n      chamado:")			
 			u.aguarde(tempo)
 			escreva("\n\nSAAE: A ligação é gratuita.")
 			u.aguarde(tempo)
@@ -772,11 +792,7 @@ programa
 				u.aguarde(tempo)
 				escreva("\n\nUsuário: Tampa de PV ou casa com retorno de esgoto.")
 				u.aguarde(tempo)
-				escreva("\n\nSAAE: Para abrir um chamado de desobstrução de esgoto ligue:")
-				u.aguarde(tempo)
-				escreva("\n\nSAAE: 0800-77-96300 a qualquer dia ou horário.")
-				u.aguarde(tempo)
-				escreva("\n\nSAAE: A ligação é gratuita.")
+				escreva("\n\nSAAE: Para abrir um chamado de desobstrução de esgoto ligue: 4602-6370.")				
 				u.aguarde(tempo)
 				escreva("\n\nSAAE: Tenha sempre uma conta em mãos e identifique seu CDC ou o endereço do\n      imóvel com rua e número.")
 				u.aguarde(tempo)
@@ -857,7 +873,7 @@ programa
 			u.aguarde(tempo)
 			escreva("\n\nSAAE: Para fazer o corte não há cobrança de taxa de serviço; quando for pedida a\n      religação será recolhida a taxa de R$ 78,57.")
 			u.aguarde(tempo)
-			escreva("\n\nSAAE: Esse serviço pode ser solicitado de segunda à sexta-feira das 8h às 17h pelo\n      WhatsApp (11) 9-9984-3028 ou a qualquer dia e horário através de atendimento\n      presencial no SAAE previamente agendado pelo 0800-77-96300.\n")
+			escreva("\n\nSAAE: Esse serviço pode ser solicitado de segunda à sexta-feira das 8h às 17h pelo\n      WhatsApp (11) 9-9984-3028 ou a qualquer dia e horário através de atendimento\n      presencial no SAAE previamente agendado.\n")
 			
 			escapar_corte()
 			}
@@ -874,7 +890,7 @@ programa
 			u.aguarde(tempo)
 			escreva("\n\nSAAE: Para fazer o religação e cobrada a taxa de serviço de R$ 78,57 e apresentar o\n      comprovante de pagamento.")
 			u.aguarde(tempo)
-			escreva("\n\nSAAE: Esse serviço pode ser solicitado de segunda à sexta-feira das 8h às 17h pelo\n      WhatsApp (11) 9-9984-3028 ou a qualquer dia e horário através de atendimento\n      presencial no SAAE previamente agendado pelo 0800-77-96300.\n")
+			escreva("\n\nSAAE: Esse serviço pode ser solicitado de segunda à sexta-feira das 8h às 17h pelo\n      WhatsApp (11) 9-9984-3028 ou a qualquer dia e horário através de atendimento\n      presencial no SAAE previamente agendado.\n")
 
 			escapar_corte()
 			}
@@ -917,15 +933,98 @@ programa
 	}
 
 	//orientacao para venda de caminhão-pipa
-	funcao vender_pipa()
+	funcao entregar_pipa()
 	{
-		escreva("\n\t\tVenda de Caminhão-Pipa\n\n")
+		inteiro tipoEntrega, tempo
+		tipoEntrega = 0
+		tempo = 1000
+		
+		limpa()
+		exibir_titulo()
+		escreva("\n\n\t\t\t    <<< Caminhã-Pipa >>>")
+		u.aguarde(tempo)
+		escreva("\n\nSAAE: Qual a situação?")
+		u.aguarde(tempo)
+		escreva("\n\nSAAE: 1: Compra de Caminhão-Pipa para caixa d'água ou piscina\n      2: Abastecimento de região sem água há mais de 12 horas")
+		escreva("\n\nOpção: ")
+		leia(tipoEntrega)
+
+		se(tipoEntrega == 1){
+			u.aguarde(tempo)
+			escreva("\n\nUsuário: Compra de CAMINHÃO-PIPA para CAIXA D'ÁGUA ou PISCINA.")
+			u.aguarde(tempo)
+			escreva("\n\nSAAE: A venda de água com caminhão-pipa está condicionada a disponibilidade de\n      água para o abastecimento do sistema público de abastecimento e a capacidade\n      de entrega.")
+			u.aguarde(tempo)
+			escreva("\n\nSAAE: A venda é fechada em 10 m³ (metros cúbicos) o equivalente a 10 mil litros,\n      que é  capacidade de transporte do caminhão. Mesmo que a entrega seja\n      fracionada o custo será o mesmo.")
+			u.aguarde(tempo)
+			escreva("\n\nSAAE: Um caminhão com 10 m³ custa R$ 202,02. Preço fixado pela Resolução ARES-PCJ\n      n.º 328/2019.")
+			u.aguarde(tempo)
+			escreva("\n\nSAAE: Os servidores do SAAE são impedidos a trabalhar em locais altos, portanto\n      para encher reservatórios elevados é preciso que alguém no local leve a\n      mangueira até o ponto de descarga.")
+			u.aguarde(tempo)
+			escreva("\n\nSAAE: O solicitante deve apresentar RG, CPF, dar informações como endereço, ponto\n      de referência, data e turno da entrega, telefone de contato, distância entre\n      o local de parda do caminhão e o ponto de descarga, se há necessidade de\n      mangueira extensora.")
+			u.aguarde(tempo)
+			escreva("\n\nSAAE: A ordem de serviço é liberada após a apresentação do comprovante de pagamento\n      da taxa de serviço.")
+			u.aguarde(tempo)
+			escreva("\n\nSAAE: Esse serviço pode ser solicitado de segunda à sexta-feira das 8h às 17h pelo\n      WhatsApp (11) 9-9984-3028 ou a qualquer dia e horário através de atendimento\n      presencial no SAAE previamente agendado.\n")
+			escapar_pipa()
+			}
+
+		senao se(tipoEntrega == 2){
+			u.aguarde(tempo)
+			escreva("\n\nUsuário: FALTA DE ÁGUA.")
+			u.aguarde(tempo)
+			escreva("\n\nSAAE: A Resolução ARES-PCJ n.º 336/2020 prevê que o SAAE faça a distribuição de\n      água com caminhão-pipa quando houver falta de água por 12 horas consecutivas\n      em decorrência de manutenção ou problemas na rede.")
+			u.aguarde(tempo)
+			escreva("\n\nSAAE: Os servidores do SAAE são impedidos a trabalhar em locais altos, portanto\n      para encher reservatórios elevados é preciso que alguém no local leve a\n      mangueira até o ponto de descarga.")
+			u.aguarde(tempo)
+			escreva("\n\nSAAE: Os servidores do SAAE poderão abastecer o imóvel apenas com caixas d'água,\n      latões, baldes e outros meios de reservação que estiverem no nível da rua.")
+			u.aguarde(tempo)
+			escreva("\n\nSAAE: Esse serviço pode ser solicitado de segunda à sexta-feira das 8h às 17h pelo\n      WhatsApp (11) 9-9984-3028 ou a qualquer dia e horário através de atendimento\n      presencial no SAAE previamente agendado.\n")
+
+			escapar_pipa()
+			}
+			
+		senao{
+				escapar_pipa()
+			}
+	}
+
+	//menu de escape de caminhão-pipa
+	funcao escapar_pipa()
+	{
+		caracter navegacao = '*'
+		
+			escreva("\n\n[P: Menu Principal\t V: Voltar\t X: Sair] ")
+			leia(navegacao)
+			
+			escolha(navegacao) {
+
+				caso 'p':{
+					 inicio()
+					 pare
+					}
+
+				caso 'v':{
+					 entregar_pipa()
+					 pare
+					}
+
+				caso 'x':{
+					 sair()
+					 pare
+					}
+
+				caso contrario:{
+					entregar_pipa()
+					}
+				
+				}
 	}
 	
 	//orientação para procedimentos de conferência do valor da fatura
 	funcao reclamar_valor()
 	{
-		escreva("\n\t\tReclamaão do Valor da Fatura\n\n")
+		escreva("\n\t\tReclamação do Valor da Fatura\n\n")
 	}
 
 	//orientação para parcelamento de faturas em atraso e multas
@@ -958,7 +1057,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 35895; 
+ * @POSICAO-CURSOR = 44047; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
