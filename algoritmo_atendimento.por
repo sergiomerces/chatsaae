@@ -1024,8 +1024,168 @@ programa
 	//orientação para procedimentos de conferência do valor da fatura
 	funcao reclamar_valor()
 	{
-		escreva("\n\t\tReclamação do Valor da Fatura\n\n")
+		inteiro tempo
+		caracter reclamacao = '*'		
+		tempo = 1000		
+		
+		limpa()
+		exibir_titulo()
+		escreva("\n\n\t\t   <<< Reclamação do Valor da Fatura >>>\n\n")
+		u.aguarde(tempo)
+		escreva("\nSAAE: Recomendamos iniciar com a verificação de um eventual erro de leitura,\n      depois o teste de vazamento e se houver suspeita de mau fucionamento do\n      hidrômetro o processo de aferição.")
+		escreva("\n\n|E: Erro de Leitura\t\t\t\t\t|T: Teste de Vazamento\n|A: Aferição de Hidrômetro\t\t\t\t|P: Menu Principal")
+		escreva("\n\nOpção: ")
+		leia(reclamacao)
+		u.aguarde(tempo)						
+		
+		escolha(reclamacao){
+		
+		caso 'e': {
+			erro_leitura()
+			escapar_valor()
+			pare
+			}
+
+		caso 't': {
+			//teste_vazamento()
+			pare
+			}
+
+		caso 'a': {
+			//afericao_hd()
+			pare
+			}
+
+		caso contrario: {
+			inicio()
+			pare
+			}
+		}
+		
 	}
+
+	//escapar da reclamação de valor de conta
+	funcao escapar_valor()
+	{
+		caracter navegacao = '*'
+		
+			escreva("\n\n[P: Menu Principal\t V: Voltar\t X: Sair] ")
+			leia(navegacao)
+			
+			escolha(navegacao) {
+
+				caso 'p':{
+					 inicio()
+					 pare
+					}
+
+				caso 'v':{
+					 limpa()
+					 exibir_titulo()
+					 erro_leitura()
+					 pare
+					}
+
+				caso 'x':{
+					 sair()
+					 pare
+					}
+
+				caso contrario:{
+					limpa()
+					exibir_titulo()
+					erro_leitura()
+					}
+				
+				}
+	}
+
+	//orientação para verificar erro de leitura
+	funcao erro_leitura(){
+
+		inteiro tempo, verLeitura, leiMedidor, leiFatura, consumo, moradores
+		verLeitura = 0
+		leiMedidor = 0
+		leiFatura = 0
+		consumo = 0
+		moradores = 1
+		tempo = 1000
+				
+		u.aguarde(tempo)
+		escreva("\n\nUsuário: Verificar ERRO DE LEITURA!")
+		u.aguarde(tempo)
+		escreva("\n\nSAAE: O primeiro passo é verificar a possibilidade de um erro de leitura.")
+		u.aguarde(tempo)
+		escreva("\n\nSAAE: Você está no local e deseja verificar a leitura agora?")
+		u.aguarde(tempo)
+		escreva("\n\nSAAE: Digite 1: SIM ou 2: Não")
+		u.aguarde(tempo)
+		escreva("\n\nOpção: ")
+		leia(verLeitura)
+
+		escolha(verLeitura){
+			
+			caso 1:{
+				u.aguarde(tempo)
+				escreva("\nUsuário: Desejo conferir a leitura agora!")
+				u.aguarde(tempo)
+				escreva("\n\nSAAE: Por favor informe a leitura lançada em sua fatura: ")			
+				u.aguarde(tempo)
+				escreva("\n\nUsuário: A leitura da fatura é: ")			
+				leia(leiFatura)
+				u.aguarde(tempo)
+				escreva("\nSAAE: Por favor vá até seu hidrômetro anote e informa somente os números pretos: ")			
+				u.aguarde(tempo)
+				escreva("\n\nUsuário: A leitura do hidrômetro é: ")			
+				leia(leiMedidor)
+
+				se(leiFatura > leiMedidor){
+					u.aguarde(tempo)
+					escreva("\nSAAE: A falta de acesso ou as condições de leitura do hidrômetro podem ter levado\n      ao erro de leitura ou lançamento pela média de consumo.")
+					u.aguarde(tempo)
+					escreva("\n\nSAAE: Fotografe a leitura na cúpula do hidrômetro e apresente na Conasa, na rua\n      Nove de Julho 849 - Centro, para repasse da leitura e a emissão de uma nova\n      fatura.")
+					u.aguarde(tempo)
+					escreva("\n\nSAAE: Caso o seu hidrômetro esteja com a cúpula embaçada, chame o SAAE pelo\n      WhatsApp (11)99984-3028 e solicite o serviço de troca de hidrômetro.")
+					u.aguarde(tempo)
+					escreva("\n\nSAAE: Se o seu cavalete está instalado na parte de dentro do quintal, impedindo o\n      acesso do leiturista/encanador, chame o SAAE pelo WhatsApp (11)99984-3028 e\n      solicite informações sobre a mudança de cavalete.")
+					}
+
+				senao se(leiFatura == leiMedidor){
+					u.aguarde(tempo)
+					escreva("\nSAAE: A leitura registrada na fatura é a mesma do medidor.")
+					u.aguarde(tempo)
+					escreva("\n\nSAAE: Não há erro de leitura, recomenda-se fazer o teste de vazamento.")
+					}
+		
+				senao{
+					u.aguarde(tempo)
+					escreva("\nSAAE: As leituras estão sequenciais, a leitura do hidrômetro está maior que a\n      leitura apontada pelo leiturista.")
+					u.aguarde(tempo)
+					escreva("\n\nSAAE: Está tudo certo quanto a leitura.")	
+					u.aguarde(tempo)
+					escreva("\n\nSAAE: Recomenda-se a realização do teste de vazamento.")
+					}
+				pare
+				}
+
+			caso 2:{
+				u.aguarde(tempo)
+				escreva("\nUsuário: Não estou no local da ligação para fazer o teste agora.")
+				u.aguarde(tempo)
+				escreva("\n\nSAAE: Para a orientação adequada pedimos que faça essa verificação asim que\n      possível.")
+				pare
+				}
+			caso contrario: {
+				limpa()
+				exibir_titulo()
+				reclamar_valor()
+				pare
+				}	
+			}
+			
+	}
+
+	
 
 	//orientação para parcelamento de faturas em atraso e multas
 	funcao parcelar_conta()
@@ -1057,7 +1217,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 44047; 
+ * @POSICAO-CURSOR = 48954; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
