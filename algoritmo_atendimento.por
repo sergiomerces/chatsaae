@@ -1053,7 +1053,8 @@ programa
 			}
 
 		caso 'a': {
-			//afericao_hd()
+			afericao_hd()
+			escapar_valor()
 			pare
 			}
 
@@ -1223,7 +1224,7 @@ programa
 		escreva("\n\nSAAE: Para abertura do processo administrativo de revisao de conta é necessário juntar:")
 		u.aguarde(tempo)
 		escreva("\n\n\t1. RG ou CNH do requerente")
-		escreva("\n\t2. As contas a serem reclamadas emitidas no máximo há 60 dias da data de abertura\n\t   do processo")
+		escreva("\n\t2. As contas a serem reclamadas emitidas no máximo há 60 dias da data de\n\t    abertura do processo")
 		escreva("\n\t3. O formulário do teste de vazamento com anotações de data, horário e leituras")
 		escreva("\n\t4. Fotos impressas coloridas ou vídeo em CD do vazameto e do conserto")
 		escreva("\n\t5. Laudo do conserto")
@@ -1236,6 +1237,42 @@ programa
 		escreva("\n\t2. As contas a serem reclamadas emitidas no máximo há 60 dias da data de abertura\n\t   do processo")
 		escreva("\n\t3. O formulário do teste de vazamento com anotações de data, horário e leituras")
 		escreva("\n\t4. Requerimento relatando sua hipótese do motivo do aumento do consumo apontado nas\n         faturas reclamadas")
+	}
+
+	//orientação para aferição de hidrômetro
+	funcao afericao_hd()
+	{
+		inteiro tempo = 1000
+		
+		u.aguarde(tempo)
+		escreva("\n\nUsuário: Fazer AFERIÇÃO DE HIDRÔMETRO!")
+		u.aguarde(tempo)
+		escreva("\n\nSAAE: Antes de solicitar o serviço de aferição o contribuinte deve realizar os\n      procedimentos de verificação de ERRO DE LEITURA e o de TESTE DE VAZAMENTO.")
+		u.aguarde(tempo)
+		escreva("\n\nSAAE: Descartada a possibilidade de ERRO DE LEITURA ou VAZAMENTO OCULTO o\n      contribuinte deve juntar os documentos para abertura de processo de aferição\n      de hidrômetro:")
+		u.aguarde(tempo)
+		escreva("\n\n\t1. RG ou CNH do requerente")
+		escreva("\n\t2. As contas a serem reclamadas emitidas no máximo há 60 dias da data de abertura\n\t   do processo")
+		escreva("\n\t3. O formulário do teste de vazamento com anotações de data, horário e leituras")
+		escreva("\n\t4. Requerimento relatando sua hipótese do motivo do aumento do consumo apontado\n           nas faturas reclamadas e o pedido de aferição de hidrômetro")
+		u.aguarde(tempo)
+		escreva("\n\nSAAE: Uma equipe do SAAE vai até o imóvel, retira o hidrômetro suspeito de mau\n      funcionamento e instala um novo.")
+		u.aguarde(tempo)
+		escreva("\n\nSAAE: O hidrômetro retirado é enviado para um laboratório externo para aferição.")
+		u.aguarde(tempo)
+		escreva("\n\nSAAE: A aferição pode ter rês resultados diferentes:\n\n     a) Marcando a mais\n     b) Marcando a menos\n     c) Normal")
+		u.aguarde(tempo)
+		escreva("\n\nSAAE: Se o hidrômetro estiver marcando a mais, o contribuinte não terá nenhum custo\n      com a troca e com a aferição do hidrômetro; também terá direito à revisão de\n      contas.")
+		u.aguarde(tempo)
+		escreva("\n\nSAAE: Se o hidrômetro estiver marcando a menos, o contribuinte não terá nenhum custo\n      com a troca e com a aferição do hidrômetro; mas não terá direito à revisão de\n      contas.")
+		u.aguarde(tempo)
+		escreva("\n\nSAAE: Se o hidrômetro estiver marcando normalmente, o contribuinte pagará R$ 168,35\n      pela troca do hidrômetro e R$ 123,00 pela aferição em laboratório e não terá\n      direito à revisão de contas.")
+		u.aguarde(tempo)
+		escreva("\n\nSAAE: Caso o hidrômetro retirado tenha mais de cinco anos de fabricação não será\n      cobrado. O hidrômetro não será recolocado após o procedimento de aferição, a\n      ligação permanecerá como novo medidor.")
+		u.aguarde(tempo)
+		escreva("\n\nSAAE: Em caso de desistência do pedido de aferição do hidrômetro por parte do\n      requerente, se o medidor já estiver com o laboratório os custos de troca e\n      aferição serão cobrados integralmente do requerente.")
+		u.aguarde(tempo)
+		escreva("\n\nSAAE: O processo de aferição deve ser aberto via atendimento presencial previamente\n      agendado pelo telefone (11) 4602-6370 ou pelo WhatsApp (11) 997536-1691.")
 	}	
 
 	//orientação para parcelamento de faturas em atraso e multas 
@@ -1268,7 +1305,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 52528; 
+ * @POSICAO-CURSOR = 56661; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
