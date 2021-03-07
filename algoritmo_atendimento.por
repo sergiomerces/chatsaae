@@ -1032,8 +1032,8 @@ programa
 		exibir_titulo()
 		escreva("\n\n\t\t   <<< Reclamação do Valor da Fatura >>>\n\n")
 		u.aguarde(tempo)
-		escreva("\nSAAE: Recomendamos iniciar com a verificação de um eventual erro de leitura,\n      depois o teste de vazamento e se houver suspeita de mau fucionamento do\n      hidrômetro o processo de aferição.")
-		escreva("\n\n|E: Erro de Leitura\t\t\t\t\t|T: Teste de Vazamento\n|A: Aferição de Hidrômetro\t\t\t\t|P: Menu Principal")
+		escreva("\nSAAE: Recomenda-se iniciar com a verificação de um eventual erro de leitura,\n      depois o teste de vazamento e se houver suspeita de mau fucionamento do\n      hidrômetro o processo de aferição.")
+		escreva("\n\n|E: Erro de Leitura\t\t\t\t        |A: Aferição de Hidrômetro\n|T: Teste de Vazamento\t\t\t\t\t|P: Menu Principal")
 		escreva("\n\nOpção: ")
 		leia(reclamacao)
 		u.aguarde(tempo)						
@@ -1047,7 +1047,8 @@ programa
 			}
 
 		caso 't': {
-			//teste_vazamento()
+			teste_vazamento()
+			escapar_valor()
 			pare
 			}
 
@@ -1185,9 +1186,59 @@ programa
 			
 	}
 
-	
+	//orientação para teste de vazamento
+	funcao teste_vazamento()
+	{
+		inteiro tempo = 1000
+		
+		u.aguarde(tempo)
+		escreva("\n\nUsuário: Fazer TESTE DE VAZAMENTO!")
+		u.aguarde(tempo)
+		escreva("\n\nSAAE: Para realizar o teste e vazamento será necessário o período mínimo de\n      quatro horas sem usar água.")
+		u.aguarde(tempo)
+		escreva("\n\nSAAE: Recomenda-se que o teste seja feito no período noturno enquanto todos dormem.")
+		u.aguarde(tempo)
+		escreva("\n\nSAAE: Antes de realizar o teste é preciso verificar se a caixa d'água está cheia e\n      as descargas dos banheiros também. Todas as torneiras e chuveiros devem estar\n      fechados também.")
+		u.aguarde(tempo)
+		escreva("\n\nSAAE: O registro do cavalete e outros registros que existam na rede interna devem\n      estar todos abertos.")
+		u.aguarde(tempo)
+		escreva("\n\nSAAE: Se o registro do cavalete estiver fechado o hidrômetro deve permanecer parado,\n      pois não deve permitir a passagem do fluxo de água. Se houver movimento no\n      medidor com o registro do cavalete fechado, o registro pode estar espanado e\n      será necessário pedir o serviço de troca de registro pelo WhatsApp\n      (11) 9-9984-3028.")
+		u.aguarde(tempo)
+		escreva("\n\nSAAE: Observadas as orientações, preferencialmente à noite, quando todos forem\n      dormir, anotar todos os números pretos e vermelhos do hidrômetro e também a\n      data e horário da leitura.")
+		u.aguarde(tempo)
+		escreva("\n\nSAAE: Ninguém pode ligar torneira, chuveiro ou dar descarga pelo período mínimo de\n      quatro horas.")
+		u.aguarde(tempo)
+		escreva("\n\nSAAE: Depois do intervalo necessário, anotar novamente todos os números pretos e\n      vermelhos do hidrômetro, lembrando de indicar a data e hora da marcação final.")
+		u.aguarde(tempo)
+		escreva("\n\nSAAE: Se houver diferença entre as leituras é um forte indício de vazamento interno.\n      Recomenda-se chamar um encanador caça-vazamentos para encontrá-lo e fazer o\n      reparo do vazamento.")
+		u.aguarde(tempo)
+		escreva("\n\nSAAE: É preciso registrar fotos ou vídeo das etapas antes, durante ou depois o reparo.\n      As fotos devem ser impressas coloridas ou o vídeo gravado em CD.")
+		u.aguarde(tempo)
+		escreva("\n\nSAAE: Se o reparo for realizado por profissional (pedreiro/encanador), deverá ser\n      feito um laudo do conserto informando onde estava o vazamento, o material usado\n      no reparo e a data de execução do serviço. O laudo deverá ser assinado e ter sua\n      assinatura reconhecida em cartório.")
+		u.aguarde(tempo)
+		escreva("\n\nSAAE: O reconhecimento da assinatura no cartório pode ser dispensado, se for apresentado\n      RG ou CNH do profissional original ou cópia autenticada com assinatura semelhante\n      a do documento.")
+		u.aguarde(tempo)
+		escreva("\n\nSAAE: Se for o proprietário ou morador que fizer o reparo, deve fazer o laudo da mesma\n      forma e assinatura pode ser reconhecida por semelhança no atendimento presencial.")
+		u.aguarde(tempo)
+		escreva("\n\nSAAE: Para abertura do processo administrativo de revisao de conta é necessário juntar:")
+		u.aguarde(tempo)
+		escreva("\n\n\t1. RG ou CNH do requerente")
+		escreva("\n\t2. As contas a serem reclamadas emitidas no máximo há 60 dias da data de abertura\n\t   do processo")
+		escreva("\n\t3. O formulário do teste de vazamento com anotações de data, horário e leituras")
+		escreva("\n\t4. Fotos impressas coloridas ou vídeo em CD do vazameto e do conserto")
+		escreva("\n\t5. Laudo do conserto")
+		u.aguarde(tempo)
+		escreva("\n\nSAAE: Juntado os documentos, agendar o atendimento presencial para abertura do processo\n      administrativo para revisão de conta pelo telefone (11) 4602-6370 ou pelo WhatsApp\n      (11) 99735-1691.")
+		u.aguarde(tempo)
+		escreva("\n\nSAAE: Caso não haja vazamento o usuário poderá optar pelo parcelamento de conta ou se\n      insistir em que há algo errado e quer uma explicação do SAAE poderá agendar\n      um atendimento presencial para abertura de processo administrativo, desde que junte\n      os seguintes documentos:")
+		u.aguarde(tempo)
+		escreva("\n\n\t1. RG ou CNH do requerente")
+		escreva("\n\t2. As contas a serem reclamadas emitidas no máximo há 60 dias da data de abertura\n\t   do processo")
+		escreva("\n\t3. O formulário do teste de vazamento com anotações de data, horário e leituras")
+		escreva("\n\t4. Requerimento relatando sua hipótese do motivo do aumento do consumo apontado nas\n         faturas reclamadas")
+	}	
 
-	//orientação para parcelamento de faturas em atraso e multas
+	//orientação para parcelamento de faturas em atraso e multas 
 	funcao parcelar_conta()
 	{
 		escreva("\n\t\tNegociação de Faturas em Atraso ou Multas\n\n")
@@ -1217,7 +1268,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 48954; 
+ * @POSICAO-CURSOR = 52528; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
