@@ -1278,8 +1278,59 @@ programa
 	//orientação para parcelamento de faturas em atraso e multas 
 	funcao parcelar_conta()
 	{
-		escreva("\n\t\tNegociação de Faturas em Atraso ou Multas\n\n")
+		limpa()
+		exibir_titulo()
+		escreva("\n\n\t\t<<< Negociação de Faturas em Atraso ou Multas >>>")
+		
+		inteiro tempo = 1000
+		
+		u.aguarde(tempo)
+		escreva("\n\nSAAE: Contas com menos de noventa dias não podem ser parceladas, excepcionalmente\n      se a conta for objeto de um processo de revisão de conta.")
+		u.aguarde(tempo)
+		escreva("\n\nSAAE: Se já existir um parcelamento aberto, ele deverá ser quitado antes de realizar\n      um novo parcelamento. Reparcelamentos não são permitidos.")
+		escreva("\n\nSAAE: O parcelamento deverá ser solicitado pelo titular da conta ou cônjuge com\n      apresentação de Certidão de Casamento com regime e comunhão parcial ou total\n      de bens ou ainda com Contrato de União Estável.")
+		u.aguarde(tempo)
+		escreva("\n\nSAAE: O inquilino também pode solicitar parcelamento desde que faça seu cadastro\n      como usuário apresentando o Contrato de Locação dentro do período de vigência\n      e com assinaturas reconhecidas.")
+		u.aguarde(tempo)
+		escreva("\n\nSAAE: Outros casos em que terceiros solicitem o parcelamento devem apresentar\n      procuração ou autorização do proprietário com firma reconhecida.")
+		u.aguarde(tempo)
+		escreva("\n\nSAAE: O parcelamento só pode ser feito por meio de atendimento presencial\n      previamente agendado pelo telefone (11) 4602-6370 ou por meio do WhatsApp\n      (11) 99735-1691.")
+		u.aguarde(tempo)
+		escreva("\n\nSAAE: O parcelamento pode ser feito no máximo em 30 parcelas, desde que respeitada\n      a parcela mínima de R$ 50,00 conforme a Resolução ARES-PCJ n. 336/2020.")
+		escapar_parcelamento()
 	}
+
+	//menu de escape de parcela conta
+	funcao escapar_parcelamento()
+	{
+		caracter navegacao = '*'
+		
+			escreva("\n\n[P: Menu Principal\t V: Voltar\t X: Sair] ")
+			leia(navegacao)
+			
+			escolha(navegacao) {
+
+				caso 'p':{
+					 inicio()
+					 pare
+					}
+
+				caso 'v':{
+					 parcelar_conta()
+					 pare
+					}
+
+				caso 'x':{
+					 sair()
+					 pare
+					}
+
+				caso contrario:{
+					escapar_gerarfatura()
+					}
+				
+				}
+		}
 
 	//orientacao para troca de titular de conta
 	funcao trocar_titular()
@@ -1305,7 +1356,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 56661; 
+ * @POSICAO-CURSOR = 58286; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
