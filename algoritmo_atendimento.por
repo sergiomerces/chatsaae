@@ -1278,11 +1278,11 @@ programa
 	//orientação para parcelamento de faturas em atraso e multas 
 	funcao parcelar_conta()
 	{
+		inteiro tempo = 1000
+		
 		limpa()
 		exibir_titulo()
 		escreva("\n\n\t\t<<< Negociação de Faturas em Atraso ou Multas >>>")
-		
-		inteiro tempo = 1000
 		
 		u.aguarde(tempo)
 		escreva("\n\nSAAE: Contas com menos de noventa dias não podem ser parceladas, excepcionalmente\n      se a conta for objeto de um processo de revisão de conta.")
@@ -1335,13 +1335,70 @@ programa
 	//orientacao para troca de titular de conta
 	funcao trocar_titular()
 	{
-		escreva("\n\t\tTroca de Titular da Conta\n\n")
+		inteiro tempo = 1000
+		
+		limpa()
+		exibir_titulo()
+		escreva("\n\n\t\t     <<< Troca de Titular da Conta >>>")
+		u.aguarde(tempo)
+		escreva("\n\nSAAE: A troca de titular de conta pode ocorrer pelo motivo de compra/venda do\n      imóvel, herança ou locação.")
+		u.aguarde(tempo)
+		escreva("\n\nSAAE: O serviço de alteração de titularidade pode ser solicitado pelo proprietário,\n      cônjuge ou inquilino.")
+		u.aguarde(tempo)
+		escreva("\n\nSAAE: Para realizar a alteração cadastral é preciso apresentar um documento de\n      posse do imóvel, pode ser Matrícula, Escritura Pública, Contrato Particular\n      de Compra e Venda com firmas reconhecidas.")
+		u.aguarde(tempo)
+		escreva("\n\nSAAE: Caso o pedido seja feito pelo proprietário, basta juntar cópias do RG e CPF\n      ou CNH a um dos documentos de posse citados.")
+		u.aguarde(tempo)
+		escreva("\n\nSAAE: Cônjuges podem requerer a alteração de titularidade juntando cópia do RG e\n      CPF ou CNH e Certidão de Casamento ou Contrato de União Estável a um dos\n      documentos de posse citados. Em caso de imóvel objeto de partilha de bens de\n      divórcio é preciso juntar o Termo Formal de Partilha homologado judicialmente.")
+		u.aguarde(tempo)
+		escreva("\n\nSAAE: Em caso de herança parentes em primeiro grau poderão requerer a alteração\n      juntando cópias do RG e CPF ou CNH a um dos documentos de posse citado,\n      também será necessário juntar a certidão de óbito e o inventário quando houver.")
+		u.aguarde(tempo)
+		escreva("\n\nSAAE: Inquilinos ou proprietários podem requerer a alteração juntando cópias do RG e\n      CPF ou CNH e o Contrato Particular de Locação dentro da vigência e com firmas\n      reconhecidas.")
+		u.aguarde(tempo)
+		escreva("\n\nSAAE: Qualquer outra pessoa com procuração do usuário registrada em cartório,\n      juntando RG e CPF ou CNH a um dos documentos de posse citados pode requerer\n      a alteração de titularidade.")
+		escapar_titular()
 	}
+
+	//menu de escape de troca de titular de conta
+	funcao escapar_titular()
+	{
+		caracter navegacao = '*'
+		
+			escreva("\n\n[P: Menu Principal\t V: Voltar\t X: Sair] ")
+			leia(navegacao)
+			
+			escolha(navegacao) {
+
+				caso 'p':{
+					 inicio()
+					 pare
+					}
+
+				caso 'v':{
+					 trocar_titular()
+					 pare
+					}
+
+				caso 'x':{
+					 sair()
+					 pare
+					}
+
+				caso contrario:{
+					escapar_gerarfatura()
+					}
+				
+				}
+		}
 
 	//orientacao para troca de registro
 	funcao trocar_registro()
 	{
-		escreva("\n\t\tTroca de Registro\n\n")
+		inteiro tempo = 1000
+
+		limpa()
+		exibir_titulo()
+		escreva("\n\n\t\t\t  <<< Troca de Registro >>>")
 	}
 
 	//orientacao de outros servios do SAAE
@@ -1356,7 +1413,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 58286; 
+ * @POSICAO-CURSOR = 61483; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
